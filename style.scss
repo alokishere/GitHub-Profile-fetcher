@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wrapper {
+    position: relative;
+    #h1{
+      align-self: center;
+      margin-bottom: 20px;
+      margin-top: -30px;
+    }
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.445);
+    width: 60%;
+    padding: 50px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(138, 69, 69, 0.507);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    .profile{
+        margin-top: 2vw;
+        display: flex;
+        align-items: end;
+        gap: 20px;
+          
+        .img{
+            height: 100px;
+            width: 100px;
+            img{
+                height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            }
+        }
+        h1{
+            font-size: 70px;
+            letter-spacing: -2px;
+            font-weight: 400;
+        }
+    }
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    width: 100%;
+ input[type=text]{
+    width: 65%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 30px;
+    font-size: 20px;
+   
+}
+input[type=submit]{
+    padding: 20px 30px;
+    font-size: 20px;
+    width: 30%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: all linear 0.2s;
+    cursor: pointer;
+}
+input[type=submit]:active{
+        scale: 0.96;
+    }
+}
+.details{
+    margin-top: 20px;
+    h1{
+        line-height: 1;
+         font-size: 40px;
+            letter-spacing: -2px;
+            font-weight: 400;
+    }
+}
