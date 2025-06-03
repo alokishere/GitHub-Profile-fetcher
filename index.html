@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile fetcher</title>
+    <title>GitHub Profile Explorer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
     <main>
         <div id="wrapper">
-            <h1 id="h1">Enter Your github user to get data</h1>
+            <div class="theme-toggle">
+                <button id="themeToggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <h1 id="h1">GitHub Profile Explorer</h1>
+            <p class="subtitle">Discover GitHub profiles and their repositories</p>
+            
             <form>
-                <input type="text" placeholder="Enter github username" name="" id="userId">
-                <input type="submit" name="" id="btn">
+                <div class="search-container">
+                    <i class="fab fa-github"></i>
+                    <input type="text" placeholder="Enter GitHub username" name="" id="userId">
+                    <input type="submit" value="Search" id="btn">
+                </div>
             </form>
+
             <div class="content">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+
+            <div class="loading-spinner" style="display: none;">
+                <div class="spinner"></div>
+            </div>
+
+            <div class="error-message" style="display: none;">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>User not found. Please try again.</p>
             </div>
         </div>
     </main>
 
-
     <script src="script.js"></script>
 </body>
-
 </html>
